@@ -152,4 +152,46 @@ ul {
     margin:10px 0;
 }
 
+/* Cards ========================================================================== */
+
+.card {
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    background: white;
+}
+
+.card img {
+    width: 293px;
+    height: 200px;
+
+}
+
+.card .star{
+    width: 100px;
+    height: 20px;
+}
+
+
+@media (min-width: 550px) {
+    .card {
+        text-align: left;
+    }
+}
+.info-card  {
+    padding: 10px 20px;
+}
+
+.info-card p, 
+.card h4 {
+    margin-bottom: 5px;
+}
+.info-card .precio {
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.info-card .precio span {
+    font-weight: 700;
+    font-size: 22px;
+}
 
