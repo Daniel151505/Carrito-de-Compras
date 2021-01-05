@@ -53,6 +53,8 @@ cargarEventListeners();
 
     function carritoHTML(){
 
+        //Limpiar el HTML
+        limpiarHTML();
 
 
         //Recorre el carrito y genera el HTML
@@ -75,3 +77,12 @@ cargarEventListeners();
     }
 
 
+
+    //Elimina los cursos del tbody
+
+    function limpiarHTML(){
+
+        while(contenedorCarrito.firstChild){
+            contenedorCarrito.removeChild(contenedorCarrito.firstChild)
+        }
+    }
