@@ -195,3 +195,15 @@ ul {
     font-size: 22px;
 }
 
+/* Footer ========================================================================== */
+
+.footer {
+    margin-top: 40px;
+    border-top:1px solid #aaa;;
+    padding-top: 40px;   
+}
+.footer .menu a{
+display: block;
+margin-bottom: 10px;
+text-decoration: none;
+}
