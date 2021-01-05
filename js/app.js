@@ -44,8 +44,34 @@ cargarEventListeners();
 
         articulosCarrito = [...articulosCarrito,infoCurso];
 
+        carritoHTML();
+
     }
 
 
+    //muestra el Carrito de Compras en el HTML 
+
+    function carritoHTML(){
+
+
+
+        //Recorre el carrito y genera el HTML
+        articulosCarrito.forEach( curso =>{
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+            <td>
+                  ${curso.titulo}         
+            </td> 
+            `;
+            
+
+            //Agrega el Html del carrito n el tbody
+
+            contenedorCarrito.appendChild(row);
+
+        })
+
+    }
 
 
