@@ -30,7 +30,7 @@ cargarEventListeners();
 
     function leerDatosCurso(curso){
 
-        //Creando obeto con el contenido del Curso Seleccionado
+        //Creando objeto con el contenido del Curso Seleccionado
 
         const infoCurso = {
             imagen: curso.querySelector('img').src,
@@ -40,9 +40,29 @@ cargarEventListeners();
             cantidad: 1
         }
 
-        //Agrega elementos al arreglo de carrito
+      //Revisa si un elemento ya existe en el carrito
+        const existe = articulosCarrito.some( curso => curso.id === infoCurso.id);
 
-        articulosCarrito = [...articulosCarrito,infoCurso];
+        if(existe){
+            // Actualizamos la cantidad
+           const cursos= articulosCarrito.map(curso => 
+            {
+
+                if(curso.id === infoCurso.id){
+                    curso.cantidad++;
+                    return curso;// retorna el objeto actualizando
+                }else{
+                    return curso; // retorna los objetos que no son duplicados
+                }
+            });
+
+           articulosCarrito = [...cursos];
+
+        }else{
+            //Agrega elementos al carrito
+            articulosCarrito = [...articulosCarrito,infoCurso];
+              
+        }
 
         carritoHTML();
 
